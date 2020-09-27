@@ -1,4 +1,4 @@
-package sda;
+package person;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -25,15 +25,15 @@ class PersonTest {
 
     }
 
-    private static class Person {
+    static class Person {
         private String name, lastName;
 
-        private Person(String name, String lastName) {
+        Person(String name, String lastName) {
             this.name = name;
             this.lastName = lastName;
         }
 
-        private String getFullName() {
+        String getFullName() {
             return name + " " + lastName;
         }
 

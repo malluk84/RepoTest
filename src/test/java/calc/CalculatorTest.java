@@ -8,21 +8,26 @@ class CalculatorTest {
     final Calculator calc = new Calculator();
 
     @Test
-    void sumTest() {
-        Assertions.assertEquals(4, calc.sum(2, 2));
+    void addTest() {
+        Assertions.assertEquals(4, calc.add(2, 2));
     }
     @Test
-    void rozTest() {
-        Assertions.assertEquals(0, calc.roz(2, 2));
+    void subTest() {
+        Assertions.assertEquals(0, calc.sub(2, 2));
     }
     @Test
-    void mnozTest() {
-        Assertions.assertEquals(4, calc.mnoz(2, 2));
+    void multiTest() {
+        Assertions.assertEquals(4, calc.multi(2, 2));
     }
     @Test
-    void dzielTest() {
-        Assertions.assertEquals(1, calc.dziel(2, 2));
+    void divisionTest() {
+        Assertions.assertEquals(1, calc.division(2, 2));
 
+    }
+    @Test
+    void arithmeticExceptionIsThrownWhenTriesToDevidedByZero() {
+        Assertions.assertThrows(ArithmeticException.class, () -> { calc.division(2,0);
+        });
     }
 
 
